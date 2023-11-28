@@ -31,8 +31,8 @@ spec:
           value: $KUBE_VERSION
         - name: env.KUBE_API_VERSIONS
           value: $KUBE_API_VERSIONS
-        - name: env.ARGOCD_APP_METADATA
-          value: $ARGOCD_APP_METADATA
+        - name: env.ARGOCD_APP_LABELS
+          value: $ARGOCD_APP_LABELS
         - name: env.ARGOCD_APP_SPEC
           value: $ARGOCD_APP_SPEC
   destination:

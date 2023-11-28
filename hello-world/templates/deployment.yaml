@@ -42,7 +42,7 @@ spec:
               value: {{ .Values.env.KUBE_VERSION }}
             - name: KUBE_API_VERSIONS
               value: {{ .Values.env.KUBE_API_VERSIONS }}
-            - name: ARGOCD_APP_METADATA
-              value: {{ .Values.env.ARGOCD_APP_METADATA }}
+            - name: ARGOCD_APP_LABELS
+              value: {{ .Values.env.ARGOCD_APP_LABELS }}
             - name: ARGOCD_APP_SPEC
               value: {{ .Values.env.ARGOCD_APP_SPEC }}
