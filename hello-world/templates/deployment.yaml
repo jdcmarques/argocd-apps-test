@@ -38,10 +38,6 @@ spec:
               value: {{ .Values.env.ARGOCD_APP_SOURCE_REPO_URL }}
             - name: ARGOCD_APP_SOURCE_TARGET_REVISION
               value: {{ .Values.env.ARGOCD_APP_SOURCE_TARGET_REVISION }}
-            - name: KUBE_VERSION
-              value: {{ .Values.env.KUBE_VERSION }}
-            - name: KUBE_API_VERSIONS
-              value: {{ .Values.env.KUBE_API_VERSIONS }}
             - name: ARGOCD_APP_LABELS
               value: {{ .Values.env.ARGOCD_APP_LABELS }}
             - name: ARGOCD_APP_SPEC
