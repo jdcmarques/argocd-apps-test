@@ -39,6 +39,6 @@ spec:
             - name: ARGOCD_APP_SOURCE_TARGET_REVISION
               value: {{ .Values.env.ARGOCD_APP_SOURCE_TARGET_REVISION }}
             - name: ARGOCD_APP_LABELS
-              value: {{ .Values.env.ARGOCD_APP_LABELS }}
+              value: {{ .Values.env.ARGOCD_APP_LABELS | quote }}
             - name: ARGOCD_APP_SPEC
-              value: {{ .Values.env.ARGOCD_APP_SPEC }}
+              value: {{ .Values.env.ARGOCD_APP_SPEC | quote}}
