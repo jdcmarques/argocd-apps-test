@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellow-world
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: hellow-world
+  template:
+    metadata:
+      labels:
+        app: hellow-world
+    spec:
+      containers:
+        - image: nginx:alpine
+          name: hellow-world
+          ports:
+            - containerPort: 80
