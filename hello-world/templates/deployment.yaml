@@ -24,4 +24,21 @@ spec:
               containerPort: {{ .Values.deployment.containerPort }}
               protocol: TCP
           env:
-            {{- toYaml .Values.deployment.env | nindent 12 }}
+            - name: ARGOCD_APP_NAME
+              value: {{ .Values.env.ARGOCD_APP_NAME }}
+            - name: ARGOCD_APP_NAMESPACE
+              value: {{ .Values.env.ARGOCD_APP_NAMESPACE }}
+            - name: ARGOCD_APP_REVISION
+              value: {{ .Values.env.ARGOCD_APP_REVISION }}
+            - name: ARGOCD_APP_REVISION_SHORT
+              value: {{ .Values.env.ARGOCD_APP_REVISION_SHORT }}
+            - name: ARGOCD_APP_SOURCE_PATH
+              value: {{ .Values.env.ARGOCD_APP_SOURCE_PATH }}
+            - name: ARGOCD_APP_SOURCE_REPO_URL
+              value: {{ .Values.env.ARGOCD_APP_SOURCE_REPO_URL }}
+            - name: ARGOCD_APP_SOURCE_TARGET_REVISION
+              value: {{ .Values.env.ARGOCD_APP_SOURCE_TARGET_REVISION }}
+            - name: KUBE_VERSION
+              value: {{ .Values.env.KUBE_VERSION }}
+            - name: KUBE_API_VERSIONS
+              value: {{ .Values.env.KUBE_API_VERSIONS }}

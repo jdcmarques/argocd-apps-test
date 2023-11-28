@@ -14,26 +14,18 @@ deployment:
       cpu: 100m
       memory: 128Mi
   containerPort: 80
-  env:
-    - name: ARGOCD_APP_NAME
-      value: ''
-    - name: ARGOCD_APP_NAMESPACE
-      value: ''
-    - name: ARGOCD_APP_REVISION
-      value: ''
-    - name: ARGOCD_APP_REVISION_SHORT
-      value: ''
-    - name: ARGOCD_APP_SOURCE_PATH
-      value: ''
-    - name: ARGOCD_APP_SOURCE_REPO_URL
-      value: ''
-    - name: ARGOCD_APP_SOURCE_TARGET_REVISION
-      value: ''
-    - name: KUBE_VERSION
-      value: ''
-    - name: KUBE_API_VERSIONS
-      value: ''
 
 service:
   name: hello-world
   port: 80
+
+env:
+  ARGOCD_APP_NAME: ''
+  ARGOCD_APP_NAMESPACE: ''
+  ARGOCD_APP_REVISION: ''
+  ARGOCD_APP_REVISION_SHORT: ''
+  ARGOCD_APP_SOURCE_PATH: ''
+  ARGOCD_APP_SOURCE_REPO_URL: ''
+  ARGOCD_APP_SOURCE_TARGET_REVISION: ''
+  KUBE_VERSION: ''
+  KUBE_API_VERSIONS: ''
