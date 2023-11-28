@@ -18,13 +18,10 @@ spec:
         - image: {{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}
           name: {{ .Values.deployment.name }}
           resources:
-            limits:
-              cpu: {{ .Values.deployment.resources.limits.cpu }}
-              memory: {{ .Values.deployment.resources.limits.memory }}
-            requests:
-              cpu: {{ .Values.deployment.resources.requests.cpu }}
-              memory: {{ .Values.deployment.resources.requests.memory }}
+{{ toYaml .Values.deployment.resources | indent 12 }}
           ports:
-            - containerPort: {{ .Values.deployment.ports[0].containerPort }}
+            - name: http
+              containerPort: {{ .Values.deployment.containerPort }}
+              protocol: TCP
           env:
             {{- toYaml .Values.deployment.env | nindent 12 }}
