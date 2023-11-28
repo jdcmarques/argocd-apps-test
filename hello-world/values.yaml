@@ -1,6 +1,5 @@
 # values.yaml
 deployment:
-  name: hello-world
   replicas: 1
   revisionHistoryLimit: 3
   image:
