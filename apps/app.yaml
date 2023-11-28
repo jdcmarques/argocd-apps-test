@@ -11,6 +11,30 @@ spec:
     repoURL: 'https://github.com/jdcmarques/argocd-apps-test'
     path: hello-world
     targetRevision: main
+    helm:
+      parameters:
+        - name: env.ARGOCD_APP_NAME
+          value: $ARGOCD_APP_NAME
+        - name: env.ARGOCD_APP_NAMESPACE
+          value: $ARGOCD_APP_NAMESPACE
+        - name: env.ARGOCD_APP_REVISION
+          value: $ARGOCD_APP_REVISION
+        - name: env.ARGOCD_APP_REVISION_SHORT
+          value: $ARGOCD_APP_REVISION_SHORT
+        - name: env.ARGOCD_APP_SOURCE_PATH
+          value: $ARGOCD_APP_SOURCE_PATH
+        - name: env.ARGOCD_APP_SOURCE_REPO_URL
+          value: $ARGOCD_APP_SOURCE_REPO_URL
+        - name: env.ARGOCD_APP_SOURCE_TARGET_REVISION
+          value: $ARGOCD_APP_SOURCE_TARGET_REVISION
+        - name: env.KUBE_VERSION
+          value: $KUBE_VERSION
+        - name: env.KUBE_API_VERSIONS
+          value: $KUBE_API_VERSIONS
+        - name: env.ARGOCD_APP_METADATA
+          value: $ARGOCD_APP_METADATA
+        - name: env.ARGOCD_APP_SPEC
+          value: $ARGOCD_APP_SPEC
   destination:
     namespace: hello-world
     name: in-cluster
